@@ -7,14 +7,17 @@ export class Patient {
         this.etat = etat;
         this.traitement = traitement;
     };
-    endroit(a,b){
-        a.Patient.push(this.nom)
-        b.Patient.unshift(this.nom)
+    endroit(){
+   
     };
     medicamment(){
-
+        
     };
     paye(){
         this.argent -= 50
     };
+};
+let pharmacie = {
+    nom : "pharmacie",
+    personne : [],
 };

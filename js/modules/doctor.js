@@ -11,16 +11,11 @@ export class Doctor {
             this.argent+= 50;
         }
     };
-    // traitement(){
-    //     // if (doc.Tariftraitements == "ctrl+maj+f" || doc.Tariftraitements == "saveOnFocusChange" || doc.Tariftraitements == "CheckLinkRelation" || doc.Tariftraitements == "Ventoline" || doc.Tariftraitements == "f12+doc") {
-            
-    //     // }
-    // }
-    patientEntre(b){
-
+    patientEntre(a){
+        
     };
-    patientSort(c){
-
+    patientSort(b){
+       
     };
 };
 // -----------------------------------------------------------------------

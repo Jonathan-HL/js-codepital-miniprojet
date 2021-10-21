@@ -5,9 +5,9 @@ export class Chat {
     };
 // que Miauler cette vieille chatte
     miaule(){
-        setTimeout(()=> {
-            console.log("MiAOUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU !");
-            }, 2000)        
+        console.log("MiAOUUUUUUUUUU !");
+        // setTimeout(()=> {
+        //     }, 2000)        
     };
 };
 let cat = new Chat("chatte");
