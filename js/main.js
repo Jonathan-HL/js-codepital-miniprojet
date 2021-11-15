@@ -15,6 +15,8 @@ import {Tariftraitements} from "./modules/doctor.js"
 //                                           Lieu
 import {Lieu} from "./modules/lieux.js";
 // console.log(Lieu);
+let pharm = new Lieu("Pharmacie")
+let cim = new Lieu("Cimetière")
 // -----------------------------------------------------------------------
 //                                         Les Ienclies 
 import {Patient} from "./modules/patient.js";
@@ -46,7 +48,6 @@ let saveOnFocusChange = new Tariftraitements("saveOnFocusChange",100);
 let CheckLinkRelation = new Tariftraitements("CheckLinkRelation",35);
 let Ventoline = new Tariftraitements("Ventoline",40);
 let f12doc = new Tariftraitements("f12+doc",20);
-let rendFou = [ctrlmajf.prix,saveOnFocusChange.prix,CheckLinkRelation.prix,Ventoline.prix,f12doc.prix];
 // -----------------------------------------------------------------------
 //                                    Instance Chat.js
 let cat = new Chat("chatte");
@@ -69,12 +70,13 @@ fullIencli.forEach(el => {
     console.log(`le traitement de ${el.nom} est : ${el.traitement}.`);
     console.log(`${el.nom} a payer le ${doc.nom} 50€`);
     el.paye(el)
-    console.log(`${el.nom} a actuellement : ${el.argent}€`);
     doc.patientSort(el)
     console.log(`${el.nom} est sortie de la cabine`);
     doc.cabinet.shift(el);
-    // console.log(`${el.nom} est aller a la pharmacie`);
     console.log(doc.cabinet);
+    console.log(`${el.nom} a actuellement : ${el.argent}€`);
+    doc.traitement(el)
+    el.seDeplacer(el.nom)
     console.log(`Solde du Doc : ${doc.argent}€`);
     console.log("------------------------------------");
 });
